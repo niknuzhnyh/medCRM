@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div id="g_id_onload"
-     data-client_id="63330412971-bnnv2jj1tptvciufv3urjkbvsbhfgf63.apps.googleusercontent.com"
-     data-context="signin"
-     data-ux_mode="popup"
-     data-callback="gAH"
-     data-nonce=""
-     data-auto_select="true"
-     data-itp_support="true">
-</div>
 
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="pill"
-     data-theme="outline"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left">
-</div>
-<div id="outPut">
-    <div id="outPutName"></div>
-    <div id="outPutEmail"></div>
-</div>
-<script src="test.1.js"></script>
+<body>
+
+
+    <header class="header df jcsb aic">
+        <div class="logo">MedCRM</div>
+        <div class="signinBtn">
+            <div id="g_id_onload"
+                data-client_id="63330412971-bnnv2jj1tptvciufv3urjkbvsbhfgf63.apps.googleusercontent.com"
+                data-context="signin" data-ux_mode="popup" data-callback="gAH" data-auto_select="true"
+                data-itp_support="true">
+            </div>
+
+            <div class="g_id_signin" data-type="icon" data-shape="circle" data-theme="outline" data-text="signin"
+                data-size="medium">
+            </div>
+        </div>
+    </header>
+    <div id="outPut">
+        <h1 id="greeting"></h1>
+    </div>
+
+    <script src="test.1.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 15px;
+    background: #dadada;
+    color: #0b0b0b;
+}
+
+.df{
+    display: flex;
+}
+.jcsb{
+    justify-content: space-between;
+}
+.aic{
+    align-items: center;
+}
