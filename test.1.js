@@ -3,7 +3,7 @@ function gAH(params) {
     console.log(params);
     console.log(parseJwt(params.credential));
     let parsedToken = parseJwt(params.credential)
-    document.getElementById('greeting').innerText = `Hello ${parsedToken.name}!!!`
+    document.getElementById('greeting').innerText = `Вітаю ${parsedToken.name}!!!`
 }
 
 function parseJwt(token) {
