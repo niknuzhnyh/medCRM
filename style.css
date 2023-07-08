@@ -8,6 +8,10 @@ body{
     color: #0b0b0b;
 }
 
+h1{
+    font-size: 1.4rem;
+}
+
 .df{
     display: flex;
 }
@@ -16,4 +20,7 @@ body{
 }
 .aic{
     align-items: center;
+}
+.tac{
+    text-align: center;
 }
