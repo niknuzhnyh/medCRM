@@ -1,6 +1,7 @@
+
 function gAH(params) {
     console.log(params);
-    console.log(parseJwt(params));
+    console.log(parseJwt(params.credential));
 }
 
 function parseJwt(token) {
