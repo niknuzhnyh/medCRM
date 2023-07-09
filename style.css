@@ -12,6 +12,10 @@ h1{
     font-size: 1.4rem;
 }
 
+ button{
+    min-width: max-content;
+ }
+
 .df{
     display: flex;
 }
