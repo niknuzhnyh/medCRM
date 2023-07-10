@@ -20,3 +20,6 @@ function parseJwt(token) {
     );
     return JSON.parse(jsonPayload);
   }
+function foo() {
+  alert('yo')
+}

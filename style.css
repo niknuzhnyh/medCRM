@@ -1,19 +1,22 @@
 *{
     box-sizing: border-box;
 }
-
 body{
     padding: 15px;
     background: #dadada;
     color: #0b0b0b;
 }
-
 h1{
     font-size: 1.4rem;
 }
-
  button{
-    min-width: max-content;
+    width: 75%;
+    margin: .5rem auto;
+    padding: 0.25rem;
+    border-radius: .5rem;
+    color: #dadada;
+    font-weight: 600;
+    background: #0b0b0b;
  }
 
 .df{
@@ -27,4 +30,11 @@ h1{
 }
 .tac{
     text-align: center;
+}
+.fdc{
+    flex-direction: column;
+}
+
+.btnsWrapper{
+    margin-top: 25vh;
 }
