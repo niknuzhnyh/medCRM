@@ -15,7 +15,7 @@
 
     <header class="header df jcsb aic">
         <div class="logo">MedCRM</div>
-        <div class="signinBtn">
+        <!-- <div class="signinBtn">
             <div id="g_id_onload"
                 data-client_id="63330412971-bnnv2jj1tptvciufv3urjkbvsbhfgf63.apps.googleusercontent.com"
                 data-context="signin" data-ux_mode="popup" data-callback="gAH" data-auto_select="true"
@@ -24,41 +24,47 @@
             <div class="g_id_signin" data-type="icon" data-shape="circle" data-theme="outline" data-text="signin"
                 data-size="medium">
             </div>
-        </div>
+        </div> -->
     </header>
 
-    <section class="mainScreen">
+    <section class="mainScreen" id="mainScreen">
         <div class="container">
             <div id="outPut">
                 <h1 id="greeting" class="tac">weefgf</h1>
             </div>
             <div class="btnsWrapper df fdc" id="btnsWrapper">
-                <button data-section ='listOfPacients'>Перегляд госпіталізованих</button>
-                <button data-section ='addPacients'>Додати госпіталізацію</button>
-                <button data-section ='outpatients'>Амбулаторний облік</button>
-                <button data-section ='addOutpatient'>Додати Амбулаторного хворого</button>
-                <button data-section ='outpatientEvent'>Амбулаторні події</button>
-                <button data-section ='dailyReport'>Щоденний звіт</button>
+                <button class="mainScreenBtn" data-section ='listOfPacients'>Перегляд госпіталізованих</button>
+                <button class="mainScreenBtn" data-section ='addPacients'>Додати госпіталізацію</button>
+                <button class="mainScreenBtn" data-section ='outpatients'>Амбулаторний облік</button>
+                <button class="mainScreenBtn" data-section ='addOutpatient'>Додати Амбулаторного хворого</button>
+                <button class="mainScreenBtn" data-section ='outpatientEvent'>Амбулаторні події</button>
+                <button class="mainScreenBtn" data-section ='dailyReport'>Щоденний звіт</button>
             </div>
         </div>
     </section>
-    <section class="listOfPacients" id="listOfPacients">
-        <h2 class="tac hidden">Перегляд госпіталізованих</h2>
+    <section class="hidden listOfPacients" id="listOfPacients">
+        <h2 class="tac">Перегляд госпіталізованих</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
-    <section class="addPacients" id="addPacients">
-        <h2 class="tac hidden">Додати госпіталізацію</h2>
+    <section class="hidden addPacients" id="addPacients">
+        <h2 class="tac">Додати госпіталізацію</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
-    <section class="outpatients" id="outpatients">
-        <h2 class="tac hidden">Амбулаторний облік</h2>
+    <section class="hidden outpatients" id="outpatients">
+        <h2 class="tac">Амбулаторний облік</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
-    <section class="addOutpatient" id="addOutpatient">
-        <h2 class="tac hidden">Додати Амбулаторного хворого</h2>
+    <section class="hidden addOutpatient" id="addOutpatient">
+        <h2 class="tac">Додати Амбулаторного хворого</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
-    <section class="outpatientEvent" id="outpatientEvent">
-        <h2 class="tac hidden">Амбулаторні події</h2>
+    <section class="hidden outpatientEvent" id="outpatientEvent">
+        <h2 class="tac">Амбулаторні події</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
-    <section class="dailyReport" id="dailyReport">
-        <h2 class="tac hidden">Щоденний звіт</h2>
+    <section class="hidden dailyReport" id="dailyReport">
+        <h2 class="tac">Щоденний звіт</h2>
+        <button class="mainScreenBtn" data-section ='mainScreen'>Назад</button>
     </section>
 
     <script src="test.1.js"></script>
