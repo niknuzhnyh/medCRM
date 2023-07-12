@@ -26,21 +26,39 @@
             </div>
         </div>
     </header>
-    <div id="outPut">
-        <h1 id="greeting" class="tac">weefgf</h1>
-    </div>
 
     <section class="mainScreen">
         <div class="container">
+            <div id="outPut">
+                <h1 id="greeting" class="tac">weefgf</h1>
+            </div>
             <div class="btnsWrapper df fdc" id="btnsWrapper">
-                <button>Перегляд госпіталізованих</button>
-                <button>Додати госпіталізацію</button>
-                <button>Амбулаторний облік</button>
-                <button>Додати Амбулаторного хворого</button>
-                <button>Амбулаторні події</button>
-                <button>Щоденний звіт</button>
+                <button data-section ='listOfPacients'>Перегляд госпіталізованих</button>
+                <button data-section ='addPacients'>Додати госпіталізацію</button>
+                <button data-section ='outpatients'>Амбулаторний облік</button>
+                <button data-section ='addOutpatient'>Додати Амбулаторного хворого</button>
+                <button data-section ='outpatientEvent'>Амбулаторні події</button>
+                <button data-section ='dailyReport'>Щоденний звіт</button>
             </div>
         </div>
+    </section>
+    <section class="listOfPacients" id="listOfPacients">
+        <h2 class="tac hidden">Перегляд госпіталізованих</h2>
+    </section>
+    <section class="addPacients" id="addPacients">
+        <h2 class="tac hidden">Додати госпіталізацію</h2>
+    </section>
+    <section class="outpatients" id="outpatients">
+        <h2 class="tac hidden">Амбулаторний облік</h2>
+    </section>
+    <section class="addOutpatient" id="addOutpatient">
+        <h2 class="tac hidden">Додати Амбулаторного хворого</h2>
+    </section>
+    <section class="outpatientEvent" id="outpatientEvent">
+        <h2 class="tac hidden">Амбулаторні події</h2>
+    </section>
+    <section class="dailyReport" id="dailyReport">
+        <h2 class="tac hidden">Щоденний звіт</h2>
     </section>
 
     <script src="test.1.js"></script>
