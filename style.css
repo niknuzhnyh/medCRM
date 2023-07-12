@@ -61,6 +61,7 @@ button .active {
 
 .hidden {
     display: none;
+    transition: 0.5s;
 }
 
 .container {
