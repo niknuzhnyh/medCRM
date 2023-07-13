@@ -22,7 +22,7 @@ button {
     margin-top: 1.2rem;
     border-radius: 0.9rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 button:hover {
@@ -61,7 +61,6 @@ button .active {
 
 .hidden {
     display: none;
-    transition: 0.5s;
 }
 
 .container {
@@ -101,4 +100,8 @@ input:focus-visible {
 
 .btnsWrapper {
     margin-top: 10vh;
+}
+
+.sectionInner{
+    min-height: 15vh;
 }
