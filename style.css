@@ -102,6 +102,47 @@ input:focus-visible {
     margin-top: 10vh;
 }
 
-.sectionInner{
+.sectionInner {
     min-height: 15vh;
+}
+
+.pacientList_item {
+    margin-top: 1rem;
+    max-height: 8rem;
+    overflow: hidden;
+    padding: 15px;
+    border: #c5c5c5 1px solid;
+    border-radius: 1rem;
+    background: #f4f4f4;
+    -webkit-box-shadow: 9px 6px 11px -6px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 9px 6px 11px -6px rgba(0, 0, 0, 0.68);
+    box-shadow: 9px 6px 11px -6px rgba(0, 0, 0, 0.68);
+}
+
+.pacientList_item div {
+    margin-bottom: 10px;
+}
+
+.pacientList{
+  padding-bottom: 3rem;
+}
+
+.pacientList_item_name{
+    font-weight: 700;
+}
+
+.pacientList_item_plase{
+    color: #00a7df;
+}
+
+.buttonWrapper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    -webkit-box-shadow: 0px -11px 22px -6px #fff;
+    -moz-box-shadow: 0px -11px 22px -6px #fff;
+    box-shadow: 0px -11px 22px -6px #fff;
 }
