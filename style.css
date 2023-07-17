@@ -108,8 +108,8 @@ input:focus-visible {
 
 .pacientList_item {
     margin-top: 1rem;
-    max-height: 8rem;
-    overflow: hidden;
+    /* max-height: 8rem; */
+    /* overflow: hidden; */
     padding: 15px;
     border: #c5c5c5 1px solid;
     border-radius: 1rem;
