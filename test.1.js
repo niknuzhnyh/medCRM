@@ -37,24 +37,11 @@ for (const i of mainScreenBtns) {
   });
 }
 
-let obj =   {
-  "pacientName": "Закутинський Віктор Федорович",
-  "place": "КНП ОБЛАСНА КЛІНІЧНА ЛІКАРНЯ ІМ.О.Ф.ГЕРБАЧЕВСЬКОГО ЖИТОМИРСЬКОЇ ОБЛАСНОЇ РАДИ",
-  "citi": "Житомир",
-  "diagnosis": "ВОСП правого колінного суглобу з переломом надколінника з внутрішньосуглобовим переломом латерального мищелка стегнової кістки, гемартроз обширний забій м'яких тканин. ВОСП правої кісті з неповною травматичною ампутацією 3-4 пальців дистальних фаланг. ВОСП шиї з наявністю стороннього металевого тіла на рівні С4. Множинні ВОС обличча.",
-  "distCode": "3.3.3.1",
-  "icdCode": "Y56.0",
-  "lossCode": "1.2.1",
-  "startDate": " 5/6/2005 09:34:42 PM"
-}
-
 function dateTimeFormta(date) {
   let d = new Intl.DateTimeFormat("uk-UA", {
     year: "numeric",
-    month: "long",
+    month: "2-digit",
     day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
     hour12: false,
   });
   date = Date.parse(date);
@@ -62,10 +49,11 @@ function dateTimeFormta(date) {
   return date;
 }
 
-
 function pacientListItemRender(obj) {
-  let date = new Date(obj.startDate)
-  date = dateTimeFormta(date)
+  // let date = new Date(obj.startDate);
+  // date = dateTimeFormta(date);
+  let icdCode = ''
+  if(obj.icdCode) icdCode = obj.icdCode
   let str = `                    
   <div class="pacientList_item">
     <div class="pacientList_item_name">
@@ -79,21 +67,44 @@ function pacientListItemRender(obj) {
     </div>
     <div class="pacientList_item_footer df jcsb">
         <div class="pacientList_item_date">
-          ${date}
+          ${obj.startDate}
         </div>
         <div class="pacientList_item_lossCode">
-            ${obj.lossCode} ( <span class="pacientList_item_icdCode">${obj.icdCode}</span> )
+            ${obj.lossCode} ( <span class="pacientList_item_icdCode">${icdCode}</span> )
         </div>
     </div>
-  </div>`
+  </div>`;
 
-  return str
-
+  return str;
 }
 
-let div = document.createElement('div');
-div.innerHTML = pacientListItemRender(obj)
+let pacientList = "pacientList";
 
-document.getElementById('pacientList').appendChild(div)
+function addListItem(obj, listId) {
+  let div = document.createElement("div");
+  div.innerHTML = pacientListItemRender(obj);
+  document.getElementById(listId).appendChild(div);
+}
+
+fetch("example2.json")
+  .then((response) => {
+    if (response.status != 200) {
+      let error = new Error(
+        `Помилка '${response.statusText}' код відповіді '${response.status}' . Зверніться до адміністратора`
+      );
+      throw error;
+    }
+    return response.json();
+  })
+  .then((data) => {
+    data.forEach(element => {
+      addListItem(element, pacientList)
+    });
+  })
+  .catch((e) => {
+    // reorderHidden(["startPage"], ["schedule", "preloaderSec"]);
+    console.log("Error !!!!");
+    alert(e);
+  });
 
 console.log("ok");
