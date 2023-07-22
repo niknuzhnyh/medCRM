@@ -58,6 +58,8 @@ function pacientListItemRender(obj) {
   <div class="pacientList_item">
     <div class="pacientList_item_name">
         ${obj.pacientName}
+        <p>${obj.rang}</p>
+        <p>${obj.distCode}</p>
     </div>
     <div class="pacientList_item_plase">
         ${obj.place}
