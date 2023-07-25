@@ -146,3 +146,9 @@ input:focus-visible {
     -moz-box-shadow: 0px -11px 22px -6px #fff;
     box-shadow: 0px -11px 22px -6px #fff;
 }
+
+form input,
+form label{
+    display: block;
+    margin: .5rem;
+}
